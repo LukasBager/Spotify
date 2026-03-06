@@ -1,5 +1,11 @@
 package Main;
 
+import Model.Genre;
+import Model.Playlist;
+import Model.Song;
+
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -77,7 +83,7 @@ public class Main {
                     break;
 
                 case 6:
-                    playlist.sortSongs();
+                    playlist.sortSong();
                     break;
 
                 case 7:
@@ -90,6 +96,6 @@ public class Main {
 
         } while (choice != 7);
 
-        scanner.Close();
+        scanner.close();
     }
 }
