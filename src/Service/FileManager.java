@@ -1,21 +1,21 @@
 package Service;
 
 
+import Model.Genre;
+import Model.Song;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class FileManager {
-
-/*
+/**
  Handles all file IO.
  No UI logic.
  No throws — exceptions handled internally.
-*/
-
-    public class FileManage {
+**/
+public class FileManager {
 
         private static final String FILE_PATH = "src/Lesson15/playlist.txt";
 
@@ -48,7 +48,6 @@ public class FileManager {
             return songs;
         }
 
-    }
     public void writeSongTitle(ArrayList<Song> songs) {
 
         FileWriter writer = null;
@@ -78,4 +77,5 @@ public class FileManager {
             }
         }
     }
-} // Get song names
+    // Get song names
+}
