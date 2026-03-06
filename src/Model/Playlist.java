@@ -63,11 +63,23 @@ public class Playlist {
             System.out.println("Sangen blev ikke fundet");
         }
     }
+    //Bobblesort efter titel
 
-    public void sortSong() {
-        Collection.sort(song, Comparator.comparing(song.getTitle()));
-        System.out.println("Playlisten er nu sorteres.");
+    public void sorterSange() {
+        for (int i = 0; i < songs.size() - 1; i++) {
+            for (int j = 0; j < songs.size() - 1 - i; j++) {
+                String titel1 = songs.get(j).getTitle().toLowerCase();
+                String titel2 = songs.get(j + 1).getTitle().toLowerCase();
+                if (titel1.compareTo(titel2) > 0) {
+                    Song temp = songs.get(j);
+                    songs.set(j, songs.get(j + 1));
+                    songs.set(j + 1, temp);
+                }
+            }
+        }
+        System.out.println("Playlisten er sorteret alfabetisk.");
     }
+
 
     public ArrayList<Song> getSong() {
         return songs;
