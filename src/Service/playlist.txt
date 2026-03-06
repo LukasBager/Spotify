@@ -1,0 +1,5 @@
+Master of Puppets,Metallica,ROCK
+Billie Jean,Michael Jackson,POP
+Take Five,Dave Brubeck,JAZZ
+Lose Yourself,Eminem,HIPHOP
+Bohemian Rhapsody,Queen,ROCK

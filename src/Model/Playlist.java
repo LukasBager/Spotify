@@ -65,9 +65,7 @@ public class Playlist {
     }
 
     public void sortSong() {
-        for (Song song : songs) {
-            Collection.sort(song, Comparator.comparing(song.getTitle()));
-        }
+        Collection.sort(song, Comparator.comparing(song.getTitle()));
         System.out.println("Playlisten er nu sorteres.");
     }
 
