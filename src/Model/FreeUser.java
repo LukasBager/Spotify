@@ -2,18 +2,10 @@ package Model;
 
 public class FreeUser extends User {
 
-
-    public FreeUser(String username, String playlist) {
-        super(username, playlist);
+    public FreeUser(String username) {
+        super(username);
+        this.setHasAds(true);
+        this.setCanDownload(false);
     }
 
-    @Override
-    public void showAds() {
-
-    }
-
-    @Override
-    public boolean canDownload() {
-        return false;
-    }
 }

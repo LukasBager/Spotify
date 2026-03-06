@@ -2,20 +2,12 @@ package Model;
 
 public class PremiumUser extends User {
 
-
-    public PremiumUser (String username, String playlist) {
-        super(username, playlist);
+    public PremiumUser(String username) {
+        super(username);
+        this.setHasAds(false);
+        this.setCanDownload(true);
     }
 
-    @Override
-    public void showAds() {
-
-    }
-
-    @Override
-    public boolean canDownload() {
-        return false;
-    }
 }
 
 

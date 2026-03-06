@@ -2,41 +2,50 @@ package Model;
 
 public abstract class User {
 
+    // Attributes
     private String username;
-    private String playlist;
+    private boolean hasAds;
+    private boolean canDownload;
 
 
-    public User(String username, String playlist) {
+    // Constructor
+    public User(String username) {
         this.username = username;
-        this.playlist = playlist;
-
     }
 
+
+    // Getters
     public String getUsername() {
         return username;
     }
 
-    public void getPlaylist(String username) {
+    public boolean getHasAds() {
+        return hasAds;
+    }
+
+    public boolean getCanDownload() {
+        return canDownload;
+    }
+
+
+    // Setters
+    public void setUsername(String username) {
         this.username = username;
     }
 
-    public String setUsername() {
-        return username;
+    public void setHasAds(boolean hasAds) {
+        this.hasAds = hasAds;
     }
 
-    public void setPlaylist(String playlist) {
-        this.playlist = playlist;
+    public void setCanDownload(boolean canDownload) {
+        this.canDownload = canDownload;
     }
 
 
-    public abstract void showAds();
-
-    public abstract boolean canDownload();
-
-
+    // Manual toString
     @Override
     public String toString() {
-        return username + "," + playlist;
+        return "";
     }
 
 }
