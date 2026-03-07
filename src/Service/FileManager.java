@@ -17,7 +17,7 @@ import java.util.ArrayList;
 **/
 public class FileManager {
 
-        private static final String FILE_PATH = "src/Lesson15/playlist.txt";
+        private static final String FILE_PATH = "src/Service/playlist.txt";
 
         public ArrayList<Song> getSongs() {
             ArrayList<Song> songs = new ArrayList<>();
