@@ -24,7 +24,7 @@ public class Main {
             System.out.println("6. Sorter sanglisten");
             System.out.println("7. Afslut");
 
-            System.out.print("Vælg en sangd: ");
+            System.out.print("Vælg en sang: ");
             choice = scanner.nextInt();
             scanner.nextLine();
 
@@ -83,7 +83,7 @@ public class Main {
                     break;
 
                 case 6:
-                    playlist.sortSong();
+                    playlist.sorterSange();
                     break;
 
                 case 7:

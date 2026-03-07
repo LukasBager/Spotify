@@ -6,6 +6,6 @@ public enum Genre {
     JAZZ,
     HIPHOP,
     CLASSICAL,
-    ELECTRONIC,
+    ELECTRONIC
 
 }
