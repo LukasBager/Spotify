@@ -24,7 +24,7 @@ public class Main {
             System.out.println("6. Sorter sanglisten");
             System.out.println("7. Afslut");
 
-            System.out.print("Vælg en sang: ");
+            System.out.print("Vælg en mulighed: ");
             choice = scanner.nextInt();
             scanner.nextLine();
 
