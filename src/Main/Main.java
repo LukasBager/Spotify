@@ -1,8 +1,6 @@
 package Main;
 
-import Model.Genre;
-import Model.Playlist;
-import Model.Song;
+import Model.*;
 
 import java.util.Scanner;
 
@@ -12,10 +10,35 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Playlist playlist = new Playlist();
 
+        User user;
+
+        System.out.println("Kunne du tænke dig at benytte vores Free eller Premium plan? Svar Free/Premium");
+        boolean choicePremium;
+        String planChoice = scanner.nextLine();
+        if (planChoice.equalsIgnoreCase("free")) {
+            choicePremium = false;
+        } else if (planChoice.equalsIgnoreCase("premium")) {
+            choicePremium = true;
+        } else {
+            System.out.println("Ugyldigt input. Du er blevet sat på vores Free plan.");
+            choicePremium = false;
+        }
+
+        System.out.println("Vælg et brugernavn");
+        String username = scanner.nextLine();
+
+        if (choicePremium) {
+            user = new PremiumUser(username, 1);
+        } else {
+            user = new FreeUser(username, 1);
+        }
+
+
+
         int choice;
 
         do {
-            System.out.println("\nVelkommen til dit hjemmelavede Spotify!");
+            System.out.println("\nVelkommen " + user.getUsername() + " til dit hjemmelavede Spotify!");
             System.out.println("1. Tilføj ny sang");
             System.out.println("2. Fjern en sang");
             System.out.println("3. Vis alle sange");
@@ -23,6 +46,9 @@ public class Main {
             System.out.println("5. Rediger en sang");
             System.out.println("6. Sorter sanglisten");
             System.out.println("7. Afslut");
+            if (user.getCanDownload()) {
+                System.out.println("8. Download din playliste");
+            }
 
             System.out.print("Vælg en mulighed: ");
             choice = scanner.nextInt();
@@ -89,7 +115,14 @@ public class Main {
                 case 7:
                     System.out.println("Programmet afsluttes...");
                     break;
-
+                case 8:
+                    if (user.getCanDownload()) {
+                        System.out.println("Downloader din playliste....");
+                        System.out.println("Din playlsite er nu downloadet");
+                    } else {
+                        System.out.println("Ugyldigt valg!");
+                    }
+                    break;
                 default:
                     System.out.println("Ugyldigt valg!");
             }
